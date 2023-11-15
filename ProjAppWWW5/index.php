@@ -10,7 +10,7 @@ if (empty($_GET['page'])) {
 } elseif ($_GET['page'] == 'pozycje') {
     $strona = 'html/pozycje.html';
 } elseif ($_GET['page'] == 'roznice') {
-    $strona = 'html/roznice.html';  // Usunięto zbędny ukośnik '/' z początku
+    $strona = 'html/roznice.html'; 
 } elseif ($_GET['page'] == 'kontakt') {
     $strona = 'html/kontakt.html';
 } elseif ($_GET['page'] == 'zabawaskrypty') {
@@ -54,7 +54,7 @@ if (empty($_GET['page'])) {
 </div>
 <div id="opis">
     <?php
-    $contentPath = $strona;  // Usunięto "html" przed zmienną $strona
+    $contentPath = $strona; 
     $contentPath = realpath($contentPath);
     if ($contentPath && file_exists($contentPath)) {
         include($contentPath);
