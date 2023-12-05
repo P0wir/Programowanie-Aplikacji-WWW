@@ -1,10 +1,3 @@
-<head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="Content-Language" content="pl" />
-    <meta name="Author" content="Mateusz Powirski" />
-    <link rel="stylesheet" href="../style.css">
-</head>
-
 <?php
 
 session_start();
@@ -26,8 +19,8 @@ function FormularzLogowania()
         <div class="logowanie">
             <form method="post" name="LoginForm" enctype="multipart/form-data" action="' . $_SERVER['REQUEST_URI'] . '">
                 <table class="logowanie">
-                    <tr><td class="kog4_t">email:</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
-                    <tr><td class="log4_t">haslo:</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
+                    <tr><td class="kog4_t">[email]</td><td><input type="text" name="login_email" class="logowanie" /></td></tr>
+                    <tr><td class="log4_t">[haslo]</td><td><input type="password" name="login_pass" class="logowanie" /></td></tr>
                     <tr><td>&nbsp;</td><td><input type="submit" name="x1_submit" class="logowanie" value="zaloguj" /></td></tr>
                 </table>
             </form>
@@ -82,10 +75,10 @@ function FormularzEdycji()
         <div class="edycja">
             <form method="post" name="EditForm" enctype="multipart/form-data" action="' . $_SERVER['REQUEST_URI'] . '">
                 <table class="edycja">
-                    <tr><td class="edit_4t">id strony edytowanej:</td><td><input type="text" name="id_strony" class="edycja" /></td></tr>
-                    <tr><td class="edit_4t">tytul:</td><td><input type="text" name="page_title" class="edycja" /></td></tr>
-                    <tr><td class="edit_4t">tresc strony:</td><td><input type="text" name="page_content" class="edycja" /></td></tr>
-                    <tr><td class="edit_4t">czy_aktywna:</td><td><input type="checkbox" name="status" class="edycja" /></td></tr>
+                    <tr><td class="edit_4t">[id_strony_edytowanej]</td><td><input type="text" name="id_strony" class="edycja" /></td></tr>
+                    <tr><td class="edit_4t">[tytul]</td><td><input type="text" name="page_title" class="edycja" /></td></tr>
+                    <tr><td class="edit_4t">[tresc strony]</td><td><input type="text" name="page_content" class="edycja" /></td></tr>
+                    <tr><td class="edit_4t">[czy_aktywna]</td><td><input type="checkbox" name="status" class="edycja" /></td></tr>
                     <tr><td>&nbsp;</td><td><input type="submit" name="x2_submit" class="edycja" value="zmien" /></td></tr>
                 </table>
             </form>
@@ -131,9 +124,9 @@ function FormularzDodawania()
         <div class="dodaj">
             <form method="post" name="AddForm" enctype="multipart/form-data" action="' . $_SERVER['REQUEST_URI'] . '">
                 <table class="dodaj">
-                    <tr><td class="add_4t">tytul:</td><td><input type="text" name="page_title_add" class="dodaj" /></td></tr>
-                    <tr><td class="add_4t">tresc strony:</td><td><input type="text" name="page_content_add" class="dodaj" /></td></tr>
-                    <tr><td class="add_4t">czy aktywna?:</td><td><input type="checkbox" name="status_add" class="dodaj" /></td></tr>
+                    <tr><td class="add_4t">[tytul]</td><td><input type="text" name="page_title_add" class="dodaj" /></td></tr>
+                    <tr><td class="add_4t">[tresc strony]</td><td><input type="text" name="page_content_add" class="dodaj" /></td></tr>
+                    <tr><td class="add_4t">[czy_aktywna]</td><td><input type="checkbox" name="status_add" class="dodaj" /></td></tr>
                     <tr><td>&nbsp;</td><td><input type="submit" name="x3_submit" class="dodaj" value="dodaj" /></td></tr>
                 </table>
             </form>
@@ -174,7 +167,7 @@ function FormularzUsuwania()
         <div class="usun">
             <form method="post" name="DeleteForm" enctype="multipart/form-data" action="' . $_SERVER['REQUEST_URI'] . '">
                 <table class="usun">
-                    <tr><td class="rem_4t">id:</td><td><input type="text" name="id_remove" class="usun" /></td></tr>
+                    <tr><td class="rem_4t">[id]</td><td><input type="text" name="id_remove" class="usun" /></td></tr>
                     <tr><td>&nbsp;</td><td><input type="submit" name="x4_submit" class="usun" value="usun" /></td></tr>
                 </table>
             </form>
@@ -203,7 +196,6 @@ function UsunPodstrone()
         }
     }
 }
-
 
 if (isset($_SESSION['status']) && $_SESSION['status'] == 1) {
     echo " ";
