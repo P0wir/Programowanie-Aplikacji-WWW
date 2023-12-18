@@ -1,0 +1,150 @@
+div {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    font-family: Arial;
+    font-size: 16px;
+    color: #333;
+}
+
+header {
+	font-size: 32px;
+	text-align: center;
+}
+
+#menu {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+#james-naismith-img {
+    width: 400px;
+    height: auto;
+}
+
+#First-Basketball-img, #pilka {
+    margin: 10px;
+    width: 200px;
+    height: auto;
+
+}
+
+#szkic-img {
+    margin: 10px;
+    width: 300px;
+    height: auto;
+	float:right
+}
+
+#mecz {
+	margin: 10px;
+    width: 600px;
+    height: auto; 
+	text-align: center;
+}
+
+#court {
+	margin: 10px;
+    width: 300px;
+    height: auto;
+	float: right;
+	clear: both;
+	position: absolute; 
+    top: 1600px; 
+    left: 1500px; 
+}
+
+#flaga {
+	float:right;
+}
+
+#team {
+	margin: 10px;
+	width: 1100px;
+	height: auto;
+}
+
+#jersey {
+	margin:10px;
+	width:400px;
+	height: auto;
+}
+
+#pozycje {
+	margin: 10px;
+	max-width: 100%;
+	width: 700px;
+	height: auto;	
+}
+
+#koperta {
+	max-width: 100%;
+	max-height:100%;
+	width: 100px;
+	height: auto;
+	float:right;
+}
+
+h1 {
+	text-align: center;
+	}
+	
+#clock-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial;
+    font-size: 16px;
+}
+
+#witaj {
+    position: absolute;
+    top: 10px; 
+    right: 200px; 
+    padding: 10px;
+	text-align: right;
+}
+	
+.kontakt-button {
+    margin-top: 20px;
+}
+
+.kontakt-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.kontakt-button {
+    margin-top: 20px;
+}
+
+.category-edit, .admin {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    float: right;
+}
