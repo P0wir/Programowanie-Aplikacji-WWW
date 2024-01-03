@@ -149,6 +149,16 @@ h1 {
     float: right;
 }
 
+.product-edit, .admin {
+	display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    float: right;
+}
+
 table img {
   max-width: 200px;
   max-height: 200px;

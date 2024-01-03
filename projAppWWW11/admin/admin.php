@@ -174,6 +174,6 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
 }
 echo '<a href="wyslij.php" class="kontakt-link">Kontakt</a>';
 echo '<a href="category.php" class="category-edit">edycja kategorii</a>';
-
+echo '<a href="products.php" class="product-edit">edycja produktow</a>';
 
 ?>
