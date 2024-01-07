@@ -8,6 +8,7 @@ $baza = "moja_strona";
 require "../cfg.php";
 
 session_start();
+$_SESSION["form_submitted"] = false;
 
 $link = mysqli_connect($dbhost, $dbuser, $dbpass);
 if (!$link) {
@@ -58,9 +59,8 @@ function WyslijMailaKontakt($odbiorca)
             !empty($_POST["tresc"]) ||
             !empty($_POST["email"])) &&
         isset($_POST["x4_submit"]) &&
-        !isset($_SESSION["form_submitted"])
+        $_SESSION["form_submitted"] !== true
     ) {
-        $_SESSION["form_submitted"] = true;
 
         $mail = new PHPMailer(true);
 
@@ -82,7 +82,7 @@ function WyslijMailaKontakt($odbiorca)
             $mail->Body = $_POST["tresc"];
 
             $mail->send();
-            echo "[wiadomosc_wyslana]";
+            header("Location: wyslij.php");
         } catch (Exception $e) {
             echo "wiadomosc nie wyslana";
         }
@@ -160,7 +160,7 @@ function PrzypomnijHaslo()
                 echo "[wiadomosc_wyslana]";
                 header("Location: wyslij.php");
                 exit();
-            } catch (Exception $e) {
+           } catch (Exception $e) {
                 echo "Wiadomość nie została wysłana: " . $mail->ErrorInfo;
             }
         } else {
