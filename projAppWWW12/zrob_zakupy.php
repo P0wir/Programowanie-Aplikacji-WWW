@@ -54,7 +54,7 @@ function CzyProduktWKoszyku($id_prod)
             }
         }
     }
-    return false; // Produkt nie istnieje w koszyku
+    return false;
 }
 
 function DodajDoKoszyka()
@@ -77,14 +77,13 @@ function DodajDoKoszyka()
 		$_SESSION[$exists.'_2'] = min($_SESSION[$exists.'_2'], $ilosc_dostepna);
     } else {
         // Jeśli produkt nie istnieje, dodaj nowy
-        // Ustawienie licznika ilości produktów w koszyku
         if (!isset($_SESSION['count'])) {
             $_SESSION['count'] = 1;
         } else {
             $_SESSION['count']++;
         }
 
-        // Przygotowanie danych nowego produktu
+        // dodawanie nowego produktu
         $nr = $_SESSION['count'];
         $row = PobierzDaneProduktu($id_prod, $link);
 
@@ -127,7 +126,6 @@ function UsunZKoszyka()
         }
     }
 
-    // Przekierowanie z powrotem do koszyka
     header("Location: zrob_zakupy.php");
     exit();
 }
@@ -206,7 +204,6 @@ function EdytujIloscWKoszyku()
         }
     }
 
-    // Przekierowanie z powrotem do koszyka
     header("Location: zrob_zakupy.php");
     exit();
 }
