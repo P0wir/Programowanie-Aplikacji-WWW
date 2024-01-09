@@ -177,6 +177,16 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
     DodajNowaPodstrone();
     echo FormularzUsuwania();
     UsunPodstrone();
+	echo '<form method="post" action="">';
+    echo '<div>';
+    echo '<button type="submit" name="logout_button" id="logout_button">Wyloguj się</button>';
+    echo '</div>';
+	echo '</form>';
+	if (isset($_POST["logout_button"])) {
+		session_destroy();
+		header("Location: ../index.php");
+    exit();
+	}
 }
 
 ?>

@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="../style.css">
 <?php
-require "../cfg.php";
 session_start();
+require "../cfg.php";
+
 
 $dbhost = $config['dbhost'];
 $dbuser = $config['dbuser'];
@@ -62,3 +63,4 @@ function Logowanie($link)
         }
     }
 }
+?>
