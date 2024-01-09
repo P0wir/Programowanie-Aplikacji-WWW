@@ -10,11 +10,11 @@ include('showpage.php');
     <meta http-equiv="Content-Language" content="pl" />
     <meta name="Author" content="Mateusz Powirski" />
     <link rel="stylesheet" href="style.css">
-    <script src="kolorujtlo.js" type="text/javascript"></script>
-    <script src="timedate.js" type="text/javascript"></script>
+    <script src="Jscripts/kolorujtlo.js" type="text/javascript"></script>
+    <script src="Jscripts/timedate.js" type="text/javascript"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="Jscripts/bigger.js"></script>
-	<script src="menu.js" type="text/javascript"></script>
+	<script src="Jscripts/menu.js" type="text/javascript"></script>
     <title>koszykówka moją pasją</title>
 </head>
 <body>
@@ -79,5 +79,6 @@ if ($pageId == 'glowna') {
 
     echo 'Mateusz Powirski '.$nr_indeksu.'grupa '.$nrGrupy.'<br/><br/>';
     ?>
+</div>
 </body>
 </html>
