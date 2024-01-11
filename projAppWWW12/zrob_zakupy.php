@@ -62,8 +62,8 @@ function DodajDoKoszyka()
     global $link;
 
     $id_prod = $_POST['id'] ?? null;
-	$cena = $_POST['cena'] ?? null;
-    $ile_sztuk = isset($_POST['ilosc']) ?? 1;
+    $cena = $_POST['cena'] ?? null;
+    $ile_sztuk = $_POST['ilosc'] ?? 1;
 
 
     // Sprawdzenie, czy produkt już istnieje w koszyku
