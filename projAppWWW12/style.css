@@ -35,7 +35,7 @@ header {
 	background-color: #FC766A;
 }
 
-#menu a:active {
+#menu a.active {
 	background-color: #FC766A;
 }
 

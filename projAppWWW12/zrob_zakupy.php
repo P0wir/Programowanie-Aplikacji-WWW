@@ -62,8 +62,8 @@ function DodajDoKoszyka()
     global $link;
 
     $id_prod = $_POST['id'] ?? null;
-	$cena = $_POST['cena'] ?? null;
-    $ile_sztuk = isset($_POST['ilosc']) ?? 1;
+    $cena = $_POST['cena'] ?? null;
+    $ile_sztuk = $_POST['ilosc'] ?? 1;
 
 
     // Sprawdzenie, czy produkt już istnieje w koszyku
@@ -224,7 +224,7 @@ function WyswietlZawartoscKoszyka()
                 $suma += $_SESSION[$x.'_6'] * $_SESSION[$x.'_2'];
                 echo '<li>';
                 echo '<span>' . $_SESSION[$x.'_4'] . ' - Ilość: ' . $_SESSION[$x.'_2'] . '</span>';
-                echo '<form method="post" action="' . $_SERVER['PHP_SELF'] . '>
+                echo '<form method="post" action="' . $_SERVER['PHP_SELF'] . '">
                         <input type="hidden" name="id" value="' . $_SESSION[$x.'_1'] . '">
                         <input type="number" name="ilosc" value="' . $_SESSION[$x.'_2'] . '" min="1">
                         <input type="submit" name="edytuj_ilosc" value="Zaktualizuj">
