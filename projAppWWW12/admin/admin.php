@@ -99,7 +99,7 @@ function DodajNowaPodstrone()
     global $link;
     if (isset($_POST["x3_submit"])) {
         $tytul = $_POST["page_title_add"];
-        $tresc = $_POST["page_content_add"];
+        $tresc = mysqli_real_escape_string($link, $_POST["page_content_add"]);
         $status = isset($_POST["status_add"]) ? 1 : 0;
 
         $query = "INSERT INTO page_list (page_title, page_content, status) VALUES ('$tytul', '$tresc', $status)";
@@ -165,6 +165,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
 //wyswietlam panel CMS
 if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
 	echo '<div id="menu">';
+	echo '<a href="admin.php" class="panel-cms">Panel CMS</a>';
 	echo '<a href="wyslij.php" class="kontakt-link">Kontakt</a>';
 	echo '<a href="category.php" class="category-edit">edycja kategorii</a>';
 	echo '<a href="products.php" class="product-edit">edycja produktow</a>';

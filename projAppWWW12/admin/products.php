@@ -101,6 +101,7 @@ function DodajNowyProdukt()
 		$kategoria_add = $_POST["kategoria_add"];
 		$gabaryt_add = $_POST["gabaryt_add"];
 		$zdjecie_sciezka = $_POST["zdjecie_add"];
+		$zdjecie_sciezka = mysqli_real_escape_string($link, $zdjecie_sciezka);
 
         $categoryCheckQuery = "SELECT id FROM categories WHERE id = $kategoria_add";
         $categoryCheckResult = mysqli_query($link, $categoryCheckQuery);
@@ -180,6 +181,7 @@ function EdytujProdukt()
 		$kategoria_edit = $_POST["kategoria_edit"];
 		$gabaryt_edit = $_POST["gabaryt_edit"];
 		$zdjecie_sciezka = $_POST["zdjecie_edit"];
+		$zdjecie_sciezka = mysqli_real_escape_string($link, $zdjecie_sciezka);
 
         $categoryCheckQuery = "SELECT id FROM categories WHERE id = $kategoria_edit";
         $categoryCheckResult = mysqli_query($link, $categoryCheckQuery);
@@ -266,6 +268,7 @@ if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
 //wyswietlam panel CMS
 if (isset($_SESSION["status"]) && $_SESSION["status"] == 1) {
 	echo '<div id="menu">';
+	echo '<a href="admin.php" class="panel-cms">Panel CMS</a>';
 	echo '<a href="wyslij.php" class="kontakt-link">Kontakt</a>';
 	echo '<a href="category.php" class="category-edit">edycja kategorii</a>';
 	echo '<a href="products.php" class="product-edit">edycja produktow</a>';
